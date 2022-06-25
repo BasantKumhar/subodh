@@ -1,1 +1,47 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .profile{
+            min-width: 360px; 
+            max-height: 360px;
+            text-align: center; 
+            margin: 5% auto; 
+            background-color:transparent; 
+            display:block;
+            flex-direction: row;
+            flex-wrap: wrap;
+       
+                
+            }
+        }
+
+        .icons{
+   
+            min-width: 60px; 
+            max-height: 60px;
+            margin: 15% auto; 
+            background-color:transparent; 
+            display:flex;
+            flex-direction: row;
+            flex-wrap:wrap;
+        }
+    </style>
+    <title>Subodh Pandit</title>
+</head>
+<body>
+    <div class="profile">
+        <h2> Subodh Pandit</h2>
+        <img src="https://cdn-icons.flaticon.com/png/512/2102/premium/2102633.png?token=exp=1656134699~hmac=d759b74b004cfba8a13f614b5f6f9e95"  alt="Subodh Pandit">
+    </div>
+    <div class="icons">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077046.png" alt="youtube">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077042.png" alt="instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077041.png" alt="facebook">
+    </div>
+</body>
+</html>
