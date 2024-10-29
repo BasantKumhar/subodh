@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open PDF</title>
+    <title>PDF Viewer</title>
     <style>
         body {
             margin: 0;
@@ -13,18 +13,36 @@
             height: 100vh;
             background-color: #f0f0f0;
         }
-        iframe {
-            width: 100%;
-            height: 100%;
+        pdf-viewer {
+            width: 80%;
+            height: 80%;
             border: none;
         }
     </style>
+    <script type="module">
+        // Define the custom PDF viewer component
+        class PdfViewer extends HTMLElement {
+            constructor() {
+                super();
+                const shadow = this.attachShadow({ mode: 'open' });
+
+                // Create an iframe to display the PDF
+                const iframe = document.createElement('iframe');
+                iframe.src = this.getAttribute('src'); // Get the PDF source from the attribute
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.border = 'none';
+
+                // Append the iframe to the shadow DOM
+                shadow.appendChild(iframe);
+            }
+        }
+
+        // Define the custom element
+        customElements.define('pdf-viewer', PdfViewer);
+    </script>
 </head>
 <body>
-    <iframe src="sub.pdf"></iframe>
-    <script>
-        // Redirect to the PDF file on page load
-        window.location.href = "sub.pdf";
-    </script>
+    <pdf-viewer src="sub.pdf"></pdf-viewer> <!-- Example PDF source -->
 </body>
 </html>
