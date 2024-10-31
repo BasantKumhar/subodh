@@ -3,46 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Viewer</title>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-        pdf-viewer {
-            width: 80%;
-            height: 80%;
-            border: none;
-        }
-    </style>
-    <script type="module">
-        // Define the custom PDF viewer component
-        class PdfViewer extends HTMLElement {
-            constructor() {
-                super();
-                const shadow = this.attachShadow({ mode: 'open' });
-
-                // Create an iframe to display the PDF
-                const iframe = document.createElement('iframe');
-                iframe.src = this.getAttribute('src'); // Get the PDF source from the attribute
-                iframe.style.width = '100%';
-                iframe.style.height = '100%';
-                iframe.style.border = 'none';
-
-                // Append the iframe to the shadow DOM
-                shadow.appendChild(iframe);
-            }
-        }
-
-        // Define the custom element
-        customElements.define('pdf-viewer', PdfViewer);
-    </script>
+    <title>Subodh Pandit - Civil Engineer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <pdf-viewer src="sub.pdf"></pdf-viewer> <!-- Example PDF source -->
+ <!-- Navbar Toggle Button -->
+<button class="navbar-toggle" id="navbar-toggle">☰</button>
+
+<!-- Navbar -->
+<div class="navbar" id="navbar">
+    <a href="#work-experience">Work Experience</a>
+    <a href="#education">Education</a>
+    <a href="#bio">Bio</a>
+    <a href="#patents">Patents</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="view-cv.html" id="view-cv-btn">View CV</a>
+    <button id="toggle-mode">Dark Mode</button>
+</div>
+
+
+    <div class="container">
+        <!-- Header with name and About section -->
+        <header>
+            <h1>Subodh Pandit</h1>
+            <p class="about">Civil Engineer passionate about sustainable infrastructure, innovative construction techniques, and efficient project management. I enjoy combining technical skills with creative problem-solving to contribute to projects that improve everyday lives and communities.</p>
+        </header>
+
+        <!-- Work Experience Section -->
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+            <p><strong>Project Trainee Engineer</strong> - Raman Construction Pvt. Ltd. (Nepal)</p>
+            <p>Kapileshwor Road Development Project and Irrigation</p>
+            <ul>
+                <li>Using surveying equipment like total station and auto level</li>
+                <li>Checking measurements and managing labor</li>
+                <li>Checking soil and road pavements</li>
+                <li>Map reading and execution</li>
+            </ul>
+            <p><strong>Duration:</strong> June 10, 2023 - July 10, 2023 &amp; June 5, 2024 - July 5, 2024</p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <p><strong>B.Tech in Civil Engineering</strong> - Sharda University, Greater Noida, UP</p>
+            <p>CGPA: 7.6 (2021 - 2025)</p>
+            <p><strong>Intermediate</strong> - DAV Sushil Kedia Bishwa Bharti Higher Secondary School, Kathmandu, Nepal</p>
+            <p>Percentage: 73% (2018 - 2020)</p>
+        </section>
+
+        <!-- Bio -->
+        <section id="bio">
+            <h2>Bio</h2>
+            <p><strong>Date of Birth:</strong> February 14, 2002</p>
+            <p><strong>Languages:</strong> English, Hindi, Nepali, Maithili</p>
+            <p><strong>Nationality:</strong> Nepali</p>
+            <p><strong>Hobbies:</strong> Dance choreography, Photography, Team Leadership</p>
+            <p><strong>Positions:</strong> Student Coordinator at Survey Camp</p>
+        </section>
+
+        <!-- Patents Section -->
+        <section id="patents">
+            <h2>Patent Grants / Published</h2>
+            <ul>
+                <li>Preparation of subgrade soil using industrial and construction waste - Application No. (202311073848), (202311090230), (20241100114)</li>
+                <li>Desiccators using thermocol - Patent No. 413355-001</li>
+            </ul>
+        </section>
+
+        <!-- Academic Projects Section -->
+        <section id="projects">
+            <h2>Academic Projects</h2>
+            <div class="projects-list">
+                <ul>
+                <li><div>Comparison between CFG pile, Lime pile, and Stone column</div></li>
+                <li><div>Improving railway embankment using construction waste</div></li>
+            </ul>
+            </div>
+        </section>
+        <!-- Courses Section -->
+        <section id="courses">
+            <h2>Courses</h2>
+            <div class="skills-list">
+                
+                <div>Safety in Construction (NPTEL - IIT Madras)</div>
+                <div>Technical Communication (IIT Roorkee)</div>
+                <div>Concrete Structure Repair (IIT Madras)</div>
+                <div>Engineering/Architectural Graphics (IIT Roorkee)</div>
+            </div>
+        </section>
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills / Courses</h2>
+            <div class="skills-list">
+                <div>Staad Pro</div>
+                <div>ArcGIS</div>
+                <div>AutoCAD</div>
+                <div>Revit</div>
+                <div>Sketchup Pro</div>
+                <div>Graphic Designing</div>
+                
+            </div>
+        </section>
+
+      
+      
+        <!-- Footer with Contact Information -->
+        <footer>
+            <p>Hire me</p>
+            <p>Email: <a href="mailto:subodhpandit9617@gmail.com">subodhpandit9617@gmail.com</a></p>
+            <p>Location: Greater Noida</p>
+            <p><a href="https://www.linkedin.com/in/subodh-pandit7" target="_blank">LinkedIn</a></p>
+        </footer>
+    </div>
+
+    <!-- Floating Download CV Button -->
+    <a href="/sub.pdf" download="My_CV">
+        <button class="download-btn" id="download-cv-btn">Download CV</button>
+    </a>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
