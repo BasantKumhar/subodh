@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="navbar-toggle" id="navbar-toggle">☰</button>
+
+<!-- Navbar -->
+<div class="navbar" id="navbar">
+    <a href="index.html">Home</a>
+    <button id="toggle-mode">Dark Mode</button>
+</div>
+    <div class="container">
+        <header>
+            <h1>Subodh Pandit CV</h1>
+        </header>
+
+        <section class="pdf-viewer">
+            <iframe src="/sub.pdf" id="pdf-frame" title="CV Viewer"></iframe>
+        </section>
+
+        <footer>
+            <p><a href="index.html">Home</a></p>
+            <!-- Floating Download CV Button -->
+    <a href="/sub.pdf" download="My_CV">
+        <button class="download-btn" id="download-cv-btn">Download CV</button>
+    </a>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
